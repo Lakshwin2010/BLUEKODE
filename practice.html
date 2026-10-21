@@ -12,7 +12,7 @@
     <!-- Header: Introduction -->
     <header>
         <h1>Hello, I'm Lakshwin</h1>
-        <p>A web developer focused on building <strong>clean</strong> and <em>simple</em> web experiences.</p>
+        <p>A web developer focused on building <em>clean</em> and <em>simple</em> web experiences.</p>
     </header>
 
     <!-- Navigation -->
@@ -30,11 +30,16 @@
         <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Laptop showing coding workspace" class="responsive-img">
             <p>
                 Welcome to my personal portfolio! I enjoy creating websites using 
                 <strong>modern web standards</strong>. My goal is to write clean, 
                 <em>semantic</em> code that is easy to read and accessible to everyone.
             </p>
+            <div class="greeting-box">
+                <p id="greeting">Welcome to my page!</p>
+                <button id="greet-button" type="button">Say Hello</button>
+            </div>
         </section>
 
         <!-- Skills Section -->
@@ -49,12 +54,16 @@
         <!-- Projects Section -->
         <section id="projects">
             <h2>Projects</h2>
-            <p>
-                <strong>Personal Portfolio:</strong> A minimal, responsive website built from scratch with semantic HTML and CSS.
-            </p>
-            <p>
-                <strong>Exam Seat Allocator:</strong> A tool designed to organize and allocate student exam seating arrangements efficiently.
-            </p>
+            <div class="projects-container">
+                <article class="project-card">
+                    <h3>Personal Portfolio</h3>
+                    <p>A minimal, responsive website built from scratch with semantic HTML and CSS.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Exam Seat Allocator</h3>
+                    <p>A tool designed to organize and allocate student exam seating arrangements efficiently.</p>
+                </article>
+            </div>
         </section>
 
         <!-- Contact Section -->
@@ -62,8 +71,30 @@
             <h2>Contact</h2>
             <p>
                 Interested in working together or connecting? 
-                Feel free to reach out via <em>email</em> or find me on <strong>GitHub</strong>.
+                Feel free to reach out via the form below:
             </p>
+
+            <!-- Contact Form -->
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="e.g. Lakshwin" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="e.g. lakshwin@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
         </section>
     </main>
 
